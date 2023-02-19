@@ -8,7 +8,15 @@ def batch_badge_creator(names):
 
 #  3. takes the list of speakers and assigns each speaker to a room
 def assign_rooms(names):
-    return [f"Hello, {name}! You'll be assigned to room {names.index(name) + 1}!" for name in names]
+    # return [f"Hello, {name}! You'll be assigned to room {names.index(name) + 1}!" for name in names]
+    rooms = range(1, 9)
+    
+    assignments = []
+    for room in rooms:
+        assignments.append(f'Hello, {names[room - 1]}! You\'ll be assigned to room {room}!')
+    
+    return assignments
+
 
 #  4. 
 def printer(names):
